@@ -1,0 +1,343 @@
+p{
+
+color:black;
+
+}
+
+.hidden_box {
+    margin: 0em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    padding: 1px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.hidden_box label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 3px 0;
+    height: auto;
+    opacity: 1;
+}
+
+/*************************場全体*************************/
+/* ----------天候ボタン---------- */
+/* 晴れボタン */
+#hare-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FF5F17;
+ display:inline-block;
+}
+
+/* 雨ボタン */
+#ame-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#75A9FF;
+  display:inline-block;
+
+}
+
+/* 砂嵐ボタン */
+#suna-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#CC9966;
+  display:inline-block;
+}
+
+/* 霰ボタン */
+#arare-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#99FFFF;
+  display:inline-block;
+}
+/* ------ ルームボタン ------ */
+#toriru-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFCCFF;
+ display:inline-block;
+}
+
+#majiru-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFCCFF;
+ display:inline-block;
+}
+
+#wannru-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFCCFF;
+ display:inline-block;
+}
+
+/* ------ フィールドボタン ------ */
+#elec-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFFF66;
+ display:inline-block;
+}
+
+#gras-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#CBFFD3;
+ display:inline-block;
+}
+
+#mist-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#EAD9FF;
+ display:inline-block;
+}
+
+/* ------ その他 ------ */
+#gravity-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFCCFF;
+ display:inline-block;
+}
+
+#water-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#75A9FF;
+ display:inline-block;
+}
+
+#mud-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#A0522D;
+ display:inline-block;
+}
+
+/*************************相手の場*************************/
+/* ----------グループなし---------- */
+/* おいかぜボタン */
+#oikaze-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#CCFFFF;
+ display:inline-block;
+}
+
+/* ひかりのかべボタン */
+#hikari-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFCCFF;
+ display:inline-block;
+}
+
+/* リフレクターボタン */
+#reflec-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFCCFF;
+ display:inline-block;
+}
+
+/* しんぴのまもりボタン */
+#sinpi-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFFFFF;
+ display:inline-block;
+}
+
+/* かわらわりボタン */
+#kawarawari-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FF9999;
+ display:inline-block;
+}
+
+/* きりばらいボタン */
+#kiribarai-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#CCFFFF;
+ display:inline-block;
+}
+/* ----------コンビネーション技---------- */
+/* ひのうみボタン */
+#hinoumi-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FF5F17;
+ display:inline-block;
+}
+
+/* にじボタン */
+#niji-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#75A9FF;
+ display:inline-block;
+}
+
+/* しつげんボタン */
+#situgen-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#CBFFD3;
+ display:inline-block;
+}
+
+/* ----------その他---------- */
+/* しろいきりボタン */
+#siroi-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#99FFFF;
+ display:inline-block;
+}
+
+/* おまじないボタン */
+#omajinai-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFFFFF;
+ display:inline-block;
+}
+
+/* かいふくふうじボタン */
+#kaihuku-button {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#FFCCFF;
+ display:inline-block;
+}
+
+
+
+/* ------ ターン経過状況 ------ */
+/* ターンを進める*/
+#next-button {
+  display: block;
+  cursor: pointer;
+  width: 160px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#EEEEEE;
+  display:inline-block;
+}
+
+/* リセットボタン */
+#reset-button {
+  display: block;
+  cursor: pointer;
+  width: 80px;
+  text-align: center;
+  border: 1px solid #232323;
+  background-color:#EEEEEE;
+  display:inline-block;
+}
