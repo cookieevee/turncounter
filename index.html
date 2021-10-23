@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css" media="all">
+<title>ポケモン　6世代　ターン管理</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
+</head>
+
+<body>
+<font size="5">&nbsp;&nbsp;ポケモン　6世代　ターン管理</font><br>
+
+<div style="float:left;width:720px;">
+
+<fieldset style="border: 0px; padding: 0px; width:660px;">
+
+<fieldset style="border: 3px solid #000000; padding: 20px; background-color: #FFFFEE; width:660px;">
+
+<legend style="background-color: #FFFFEE;">場全体</legend>
+
+天候<br>
+
+<div id="hare-button"  onclick="WeatherDisplay(1)"><span id="Hare">はれ</span></div> &nbsp;
+<div id="ame-button"   onclick="WeatherDisplay(2)"><span id="Ame">あめ</span></div> &nbsp;
+<div id="suna-button"  onclick="WeatherDisplay(3)"><span id="Sunaarasi">すなあらし</span></div> &nbsp;
+<div id="arare-button" onclick="WeatherDisplay(4)"><span id="Arare">あられ</span></div> <br><br>
+
+ルーム<br>
+
+<div id="toriru-button" onclick="TrickDisplay()"><span id="TrickRoom">トリックルーム</span></div> &nbsp;
+<div id="majiru-button" onclick="MagicDisplay()"><span id="MagicRoom">マジックルーム</span></div> &nbsp;
+<div id="wannru-button" onclick="WonderDisplay()"><span id="WonderRoom">ワンダールーム</span></div> <br><br>
+
+<div class="hidden_box">
+    <label for="label1">＋</label>&nbsp;フィールド
+    <input type="checkbox" id="label1"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      	<p>
+	<div id="elec-button" onclick="FieldDisplay(1)">エレキフィールド</div> &nbsp;
+	<div id="gras-button" onclick="FieldDisplay(2)">グラスフィールド</div> &nbsp;
+	<div id="mist-button" onclick="FieldDisplay(3)">ミストフィールド</div> 
+	</p>
+      <!--ここまで-->
+    </div>
+</div>
+
+<br>
+
+<div class="hidden_box">
+    <label for="label2">＋</label>&nbsp;その他
+    <input type="checkbox" id="label2"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      	<p>
+	<div id="gravity-button" onclick="GravityDisplay()">じゅうりょく</div> &nbsp;
+	<div id="water-button"   onclick="WaterDisplay()">みずあそび</div> &nbsp;
+	<div id="mud-button"     onclick="MudDisplay()">どろあそび</div> 
+	</p>
+      <!--ここまで-->
+    </div>
+</div>
+</fieldset>
+
+<br>
+
+<fieldset style="border: 3px solid #000000; padding: 20px; background-color: #FFEEFF; width:660px;">
+
+<legend style="background-color: #FFEEFF;">相手側</legend>
+
+<div id="oikaze-button" onclick="OikazeDisplay(1)">おいかぜ</div> &nbsp;
+<div id="hikari-button" onclick="HikariDisplay(1)"><span id="OpoHikarinokabe">ひかりのかべ</span></div> &nbsp;
+<div id="reflec-button" onclick="ReflecDisplay(1)"><span id="OpoReflector">リフレクター</span></div> &nbsp;
+<div id="sinpi-button" onclick="SinpiDisplay(1)">しんぴのまもり</div> <br><br>
+
+<div class="hidden_box">
+    <label for="label3">＋</label>&nbsp;壁などの解除
+    <input type="checkbox" id="label3"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      	<p>
+	<div id="kawarawari-button" onclick="Kawarawari(1)">かわらわり</div> &nbsp;
+	<div id="kiribarai-button" onclick="Kiribarai(1)">きりばらい</div>
+	</p>
+      <!--ここまで-->
+    </div>
+</div>
+
+<br>
+
+<div class="hidden_box">
+    <label for="label4">＋</label>&nbsp;コンビネーション技
+    <input type="checkbox" id="label4"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      	<p>
+	<div id="hinoumi-button" onclick="HinoumiDisplay(1)">ひのうみ</div> &nbsp;
+	<div id="niji-button"    onclick="NijiDisplay(1)">にじ</div> &nbsp;
+	<div id="situgen-button" onclick="SitugenDisplay(1)">しつげん</div> 
+	</p>
+      <!--ここまで-->
+    </div>
+</div>
+
+<br>
+
+<div class="hidden_box">
+    <label for="label5">＋</label>&nbsp;その他
+    <input type="checkbox" id="label5"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      	<p>
+	<div id="siroi-button"    onclick="SiroiDisplay(1)">しろいきり</div> &nbsp;
+	<div id="omajinai-button" onclick="OmajinaiDisplay(1)">おまじない</div> &nbsp;
+	<div id="kaihuku-button"  onclick="KaihukuDisplay(1)">かいふくふうじ</div>
+	</p>
+      <!--ここまで-->
+    </div>
+</div>
+
+</fieldset>
+
+<br>
+
+<fieldset style="border: 3px solid #000000; padding: 20px; background-color: #EEFFFF; width:660px;">
+
+<legend style="background-color: #EEFFFF;">自分側</legend>
+
+<div id="oikaze-button" onclick="OikazeDisplay(2)">おいかぜ</div> &nbsp;
+<div id="hikari-button" onclick="HikariDisplay(2)"><span id="YouHikarinokabe">ひかりのかべ</span></div> &nbsp;
+<div id="reflec-button" onclick="ReflecDisplay(2)"><span id="YouReflector">リフレクター</span></div> &nbsp;
+<div id="sinpi-button" onclick="SinpiDisplay(2)">しんぴのまもり</div> <br><br>
+
+<div class="hidden_box">
+    <label for="label6">＋</label>&nbsp;壁などの解除
+    <input type="checkbox" id="label6"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      	<p>
+	<div id="kawarawari-button" onclick="Kawarawari(2)">かわらわり</div> &nbsp;
+	<div id="kiribarai-button" onclick="Kiribarai(2)">きりばらい</div>
+	</p>
+      <!--ここまで-->
+    </div>
+</div>
+
+<br>
+
+<div class="hidden_box">
+    <label for="label7">＋</label>&nbsp;コンビネーション技
+    <input type="checkbox" id="label7"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      	<p>
+	<div id="hinoumi-button" onclick="HinoumiDisplay(2)">ひのうみ</div> &nbsp;
+	<div id="niji-button"    onclick="NijiDisplay(2)">にじ</div> &nbsp;
+	<div id="situgen-button" onclick="SitugenDisplay(2)">しつげん</div>
+	</p>
+      <!--ここまで-->
+    </div>
+</div>
+
+<br>
+
+<div class="hidden_box">
+    <label for="label8">＋</label>&nbsp;その他
+    <input type="checkbox" id="label8"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      	<p>
+	<div id="siroi-button"    onclick="SiroiDisplay(2)">しろいきり</div> &nbsp;
+	<div id="omajinai-button" onclick="OmajinaiDisplay(2)">おまじない</div> &nbsp;
+	<div id="kaihuku-button"  onclick="KaihukuDisplay(2)">かいふくふうじ</div>
+	</p>
+      <!--ここまで-->
+    </div>
+</div>
+
+</fieldset>
+<br>
+ver 1.0 (2021/09/02 更新)<br>
+<br>
+</fieldset>
+</div>
+
+<div style="float:left;width:280px;"><fieldset style="border: 3px solid #000000; padding: 20px; background-color: #E6FFE9; width:280px;">
+<legend style="background-color: #E6FFE9;">ターン経過状況</legend>
+<div id="next-button"  onclick="Next()">1ターン進める</div> 
+<div id="reset-button" onclick="Reset()">リセット</div><br><br>
+【場全体】<br>
+<span id="Weather"><br></span><span id="WeatherCount"></span>
+<span id="Trick"><br></span><span id="TrickCount"></span>
+<span id="Magic"></span><span id="MagicCount"></span>
+<span id="Wonder"></span><span id="WonderCount"></span>
+<span id="Field"><br></span><span id="FieldCount"></span>
+<span id="Gravity"><br></span><span id="GravityCount"></span>
+<span id="Water"></span><span id="WaterCount"></span>
+<span id="Mud"></span><span id="MudCount"></span>
+<br>
+<br>
+【相手側】<br>
+<span id="OpoOikaze"><br></span><span id="OpoOikazeCount"></span>
+<span id="OpoHikari"><br></span><span id="OpoHikariCount"></span>
+<span id="OpoReflec"><br></span><span id="OpoReflecCount"></span>
+<span id="OpoSinpi"><br></span><span id="OpoSinpiCount"></span>
+<span id="OpoHinoumi"></span><span id="OpoHinoumiCount"></span>
+<span id="OpoNiji"></span><span id="OpoNijiCount"></span>
+<span id="OpoSitugen"></span><span id="OpoSitugenCount"></span>
+<span id="OpoSiroi"></span><span id="OpoSiroiCount"></span>
+<span id="OpoOmajinai"></span><span id="OpoOmajinaiCount"></span>
+<span id="OpoKaihuku"></span><span id="OpoKaihukuCount"></span>
+<br>
+<br>
+【自分側】<br>
+<span id="YouOikaze"><br></span><span id="YouOikazeCount"></span>
+<span id="YouHikari"><br></span><span id="YouHikariCount"></span>
+<span id="YouReflec"><br></span><span id="YouReflecCount"></span>
+<span id="YouSinpi"><br></span><span id="YouSinpiCount"></span>
+<span id="YouHinoumi"></span><span id="YouHinoumiCount"></span>
+<span id="YouNiji"></span><span id="YouNijiCount"></span>
+<span id="YouSitugen"></span><span id="YouSitugenCount"></span>
+<span id="YouSiroi"></span><span id="YouSiroiCount"></span>
+<span id="YouOmajinai"></span><span id="YouOmajinaiCount"></span>
+<span id="YouKaihuku"></span><span id="YouKaihukuCount"></span>
+<br>
+<br>
+</fieldset></div>
+<br>
+<br>
+</body>
+</html>
